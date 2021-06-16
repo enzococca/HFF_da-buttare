@@ -20,7 +20,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>HFFsurvey -  Site managment</string>
+   <string>HFFsurvey -  Site Management</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../../resources/resources.qrc">
@@ -1316,7 +1316,7 @@
                  </item>
                  <item>
                   <property name="text">
-                   <string>Hight</string>
+                   <string>Height</string>
                   </property>
                  </item>
                  <item>
@@ -2389,7 +2389,7 @@
            </widget>
            <widget class="QWidget" name="tab_6">
             <attribute name="title">
-             <string>Mesaurement</string>
+             <string>Measurement</string>
             </attribute>
             <widget class="QWidget" name="layoutWidget">
              <property name="geometry">
@@ -2680,7 +2680,7 @@
               </size>
              </property>
              <property name="text">
-              <string>Dating letteral</string>
+              <string>Dating</string>
              </property>
             </widget>
             <widget class="QLineEdit" name="lineEdit_dating">
@@ -3268,6 +3268,9 @@
               </item>
               <item row="1" column="2" colspan="6">
                <widget class="QToolButton" name="toolButton_loadpath">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -3326,6 +3329,9 @@
               </item>
               <item row="1" column="8">
                <widget class="QLineEdit" name="excel_browse_folder">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -3336,6 +3342,9 @@
               </item>
               <item row="1" column="10">
                <widget class="QPushButton" name="pushButton_import_excel">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -3361,6 +3370,184 @@
                </widget>
               </item>
              </layout>
+            </widget>
+            <widget class="QgsDockWidget" name="mDockWidget_4">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>350</y>
+               <width>600</width>
+               <height>224</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>600</width>
+               <height>89</height>
+              </size>
+             </property>
+             <property name="floating">
+              <bool>true</bool>
+             </property>
+             <property name="windowTitle">
+              <string>Pdf2Word</string>
+             </property>
+             <widget class="QWidget" name="dockWidgetContents_3">
+              <widget class="QLineEdit" name="lineEdit_pdf_path">
+               <property name="geometry">
+                <rect>
+                 <x>57</x>
+                 <y>10</y>
+                 <width>311</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="acceptDrops">
+                <bool>true</bool>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>choose the pdf convert to word</string>
+               </property>
+              </widget>
+              <widget class="QToolButton" name="toolButton_pdfpath">
+               <property name="geometry">
+                <rect>
+                 <x>371</x>
+                 <y>11</y>
+                 <width>22</width>
+                 <height>19</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="pbnOpenpdfDirectory">
+               <property name="geometry">
+                <rect>
+                 <x>480</x>
+                 <y>9</y>
+                 <width>75</width>
+                 <height>23</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="../../resources/resources.qrc">
+                 <normaloff>:/icons/open-folder.png</normaloff>:/icons/open-folder.png</iconset>
+               </property>
+              </widget>
+              <widget class="QLabel" name="label_54">
+               <property name="geometry">
+                <rect>
+                 <x>9</x>
+                 <y>9</y>
+                 <width>51</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>PDF path</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="pushButton_convert">
+               <property name="geometry">
+                <rect>
+                 <x>399</x>
+                 <y>9</y>
+                 <width>75</width>
+                 <height>23</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Convert</string>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="lineEdit_pag1">
+               <property name="geometry">
+                <rect>
+                 <x>57</x>
+                 <y>38</y>
+                 <width>40</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The &amp;quot;0&amp;quot; is the first page to convert&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="inputMask">
+                <string extracomment="Lo&quot;0&quot; indica la prima pagina"/>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="lineEdit_pag2">
+               <property name="geometry">
+                <rect>
+                 <x>120</x>
+                 <y>38</y>
+                 <width>40</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+              <widget class="QLabel" name="label_59">
+               <property name="geometry">
+                <rect>
+                 <x>9</x>
+                 <y>38</y>
+                 <width>41</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Pagg.</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="label_60">
+               <property name="geometry">
+                <rect>
+                 <x>105</x>
+                 <y>38</y>
+                 <width>16</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>to</string>
+               </property>
+              </widget>
+             </widget>
             </widget>
            </widget>
            <widget class="QWidget" name="tab_7">
@@ -4144,57 +4331,6 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="1">
-      <widget class="QPushButton" name="pushButton_export_excel">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Export Excel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="icon">
-        <iconset resource="../../resources/resources.qrc">
-         <normaloff>:/icons/excel-export.png</normaloff>:/icons/excel-export.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="2">
-      <widget class="QPushButton" name="pushButton_connect">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>C</string>
-       </property>
-      </widget>
-     </item>
      <item row="4" column="6">
       <widget class="QLabel" name="label_28">
        <property name="sizePolicy">
@@ -4252,6 +4388,88 @@
        </property>
       </widget>
      </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="pushButton_export_excel">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Export Excel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../resources/resources.qrc">
+         <normaloff>:/icons/excel-export.png</normaloff>:/icons/excel-export.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="pushButton_open_dir">
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../../resources/resources.qrc">
+         <normaloff>:/icons/open-folder.png</normaloff>:/icons/open-folder.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QPushButton" name="pushButton_word">
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset resource="../../resources/resources.qrc">
+         <normaloff>:/icons/word.png</normaloff>:/icons/word.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="QPushButton" name="pushButton_connect">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
   </layout>
@@ -4261,6 +4479,12 @@
    <class>QgsCollapsibleGroupBox</class>
    <extends>QGroupBox</extends>
    <header>qgscollapsiblegroupbox.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QgsDockWidget</class>
+   <extends>QDockWidget</extends>
+   <header>qgsdockwidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
@@ -4280,12 +4504,28 @@
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>709</x>
-     <y>180</y>
+     <x>219</x>
+     <y>102</y>
     </hint>
     <hint type="destinationlabel">
      <x>560</x>
      <y>617</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_word</sender>
+   <signal>pressed()</signal>
+   <receiver>mDockWidget_4</receiver>
+   <slot>toggleUserVisible()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>132</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>214</x>
+     <y>577</y>
     </hint>
    </hints>
   </connection>

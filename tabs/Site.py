@@ -24,12 +24,15 @@ import os
 from datetime import date
 import psycopg2
 import sqlite3 as sq
+import time
 import subprocess
 import sys
 import psycopg2
 import pandas as pd
 import numpy as np
-
+import re
+import platform
+from pdf2docx import parse
 from builtins import range
 from builtins import str
 from qgis.PyQt.QtGui import QDesktopServices,QColor, QIcon
@@ -42,7 +45,7 @@ from ..modules.db.hff_system__conn_strings import Connection
 from ..modules.db.hff_db_manager import Hff_db_management
 from ..modules.db.hff_system__utility import Utility
 from ..modules.gis.hff_system__pyqgis import Hff_pyqgis
-#from ..modules.utility.print_relazione_pdf import exp_rel_pdf
+from ..modules.utility.settings import Settings
 from ..modules.utility.hff_system__error_check import Error_check
 from ..modules.utility.delegateComboBox import ComboBoxDelegate
 from ..test_area import Test_area
@@ -239,7 +242,8 @@ class hff_system__Site(QDialog, MAIN_DIALOG_CLASS):
     ]
 
 
-
+    HOME = os.environ['HFF_HOME']
+    PDFFOLDER = '{}{}{}'.format(HOME, os.sep, "HFF_PDF_folder")
     DB_SERVER = "not defined"  ####nuovo sistema sort
     
     def __init__(self, iface):
@@ -249,6 +253,7 @@ class hff_system__Site(QDialog, MAIN_DIALOG_CLASS):
         self.setupUi(self)
         self.dockWidget_view.setHidden(True)
         self.currentLayerId = None
+        self.mDockWidget_4.setHidden(True)
         self.HOME = os.environ['HFF_HOME']
         try:
             self.on_pushButton_connect_pressed()
@@ -262,6 +267,8 @@ class hff_system__Site(QDialog, MAIN_DIALOG_CLASS):
         self.fill_fields()
         self.pbnOpenSiteDirectory.clicked.connect(self.openSiteDir)
         self.pbn_browse_folder.clicked.connect(self.setPathToSites)
+        self.toolButton_pdfpath.clicked.connect(self.setPathpdf)
+        self.pbnOpenpdfDirectory.clicked.connect(self.openpdfDir)
         self.customize_GUI()
         #self.replace_()
     def setPathToSites(self):
@@ -285,6 +292,55 @@ class hff_system__Site(QDialog, MAIN_DIALOG_CLASS):
             QMessageBox.warning(self, "INFO", "Directory not found",
                                 QMessageBox.Ok)
 
+    def on_pushButton_open_dir_pressed(self):
+        HOME = os.environ['HFF_HOME']
+        path = '{}{}{}'.format(HOME, os.sep, "HFF_PDF_folder")
+
+        if platform.system() == "Windows":
+            os.startfile(path)
+        elif platform.system() == "Darwin":
+            subprocess.Popen(["open", path])
+        else:
+            subprocess.Popen(["xdg-open", path])
+
+    def setPathpdf(self):
+        s = QgsSettings()
+        dbpath = QFileDialog.getOpenFileName(
+            self,
+            "Set file name",
+            self.PDFFOLDER,
+            " PDF (*.pdf)"
+        )[0]
+        #filename=dbpath.split("/")[-1]
+        if dbpath:
+            self.lineEdit_pdf_path.setText(dbpath)
+            s.setValue('',dbpath) 
+    def openpdfDir(self):
+        HOME = os.environ['HFF_HOME']
+        path = '{}{}{}'.format(HOME, os.sep, "HFF_PDF_folder")
+        if platform.system() == "Windows":
+            os.startfile(path)
+        elif platform.system() == "Darwin":
+            subprocess.Popen(["open", path])
+        else:
+            subprocess.Popen(["xdg-open", path])
+    
+    def on_pushButton_convert_pressed(self):
+        # if not bool(self.setPathpdf()):    
+            # QMessageBox.warning(self, "INFO", "devi scegliere un file pdf",
+                                # QMessageBox.Ok)
+        try:
+            pdf_file = self.lineEdit_pdf_path.text()
+            filename=pdf_file.split("/")[-1]
+            docx_file = self.PDFFOLDER+'/'+filename+'.docx'
+            # convert pdf to docx
+            parse(pdf_file, docx_file, start=self.lineEdit_pag1.text(), end=self.lineEdit_pag2.text())
+            
+            QMessageBox.information(self, "INFO", "Conversion completed",
+                                QMessageBox.Ok)
+        except Exception as e:
+            QMessageBox.warning(self, "Error", str(e),
+                                QMessageBox.Ok)
     def enable_button(self, n):
         """This method Unable or Enable the GUI buttons on browse modality"""
 
@@ -1997,6 +2053,61 @@ class hff_system__Site(QDialog, MAIN_DIALOG_CLASS):
         f.close()
 
     def on_pushButton_export_excel_pressed(self):
-        cmd = 'python3'
-        subprocess.call([cmd,'{}'.format(os.path.join(os.path.dirname(__file__), 'Excel.py'))])
+        # cmd = 'python3'
+        # subprocess.call([cmd,'{}'.format(os.path.join(os.path.dirname(__file__), 'Excel.py'))])
+        home = os.environ['HFF_HOME']
+        sito_path = '{}{}{}'.format(self.HOME, os.sep, "HFF_EXCEL_folder")
+        sito_location = str(self.comboBox_location.currentText())
+        cfg_rel_path = os.path.join(os.sep, 'HFF_DB_folder', 'config.cfg')
+        file_path = '{}{}'.format(home, cfg_rel_path)
+        conf = open(file_path, "r")
+        data = conf.read()
+        settings = Settings(data)
+        settings.set_configuration()
+        conf.close()    
+        db_username = settings.USER
+        host = settings.HOST
+        port = settings.PORT
+        database_password=settings.PASSWORD
+        db_names = settings.DATABASE
+        server=settings.SERVER    
+        
+        if server=='postgres':
+            connessione ="dbname=%s user=%s host=%s password=%s port=%s" % (db_names,db_username,host,database_password,port)
+            
+            
+            conn = psycopg2.connect(connessione)
+            cur = conn.cursor()
+            anchor_= '%s' % (sito_location+'_anchor_' +  time.strftime('%Y%m%d_') + '.xlsx')
+            dump_dir=os.path.join(sito_path, anchor_)
+            cur.execute("SELECT * FROM site_table where location_='%s';" % sito_location)
+            rows = cur.fetchall()
+            col_names = []
+            for i in cur.description:
+              col_names.append(i[0])
 
+            a=pd.DataFrame(rows,columns=col_names)
+            writer = pd.ExcelWriter(dump_dir, engine='xlsxwriter')
+            a.to_excel(writer, sheet_name='Sheet1',index=True)
+            writer.save()
+                     
+            # for i in temp_data_list:
+            # self.DATA_LIST.append(i)
+            QMessageBox.warning(self, "Message","Exported completed" , QMessageBox.Ok)
+        else:
+            anchor_= '%s' % (sito_location+'_SITE_' +  time.strftime('%Y%m%d_') + '.xlsx')
+            dump_dir=os.path.join(sito_path, anchor_)
+            cur.execute("SELECT * FROM site_table where location_='%s';" % sito_location)
+            rows = cur.fetchall()
+            col_names = []
+            for i in cur.description:
+              col_names.append(i[0])
+
+            a=pd.DataFrame(rows,columns=col_names)
+            writer = pd.ExcelWriter(dump_dir, engine='xlsxwriter')
+            a.to_excel(writer, sheet_name='Sheet1',index=True)
+            writer.save()
+                     
+                # for i in temp_data_list:
+                # self.DATA_LIST.append(i)
+            QMessageBox.warning(self, "Message","Exported completed" , QMessageBox.Ok)
