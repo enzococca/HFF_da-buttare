@@ -2078,8 +2078,8 @@ class hff_system__Site(QDialog, MAIN_DIALOG_CLASS):
             
             conn = psycopg2.connect(connessione)
             cur = conn.cursor()
-            anchor_= '%s' % (sito_location+'_anchor_' +  time.strftime('%Y%m%d_') + '.xlsx')
-            dump_dir=os.path.join(sito_path, anchor_)
+            site_= '%s' % (sito_location+'_Site_' +  time.strftime('%Y%m%d_') + '.xlsx')
+            dump_dir=os.path.join(sito_path, site_)
             cur.execute("SELECT * FROM site_table where location_='%s';" % sito_location)
             rows = cur.fetchall()
             col_names = []
@@ -2095,8 +2095,15 @@ class hff_system__Site(QDialog, MAIN_DIALOG_CLASS):
             # self.DATA_LIST.append(i)
             QMessageBox.warning(self, "Message","Exported completed" , QMessageBox.Ok)
         else:
-            anchor_= '%s' % (sito_location+'_SITE_' +  time.strftime('%Y%m%d_') + '.xlsx')
-            dump_dir=os.path.join(sito_path, anchor_)
+            
+            self.HOME = os.environ['HFF_HOME']
+            sqlite_DB_path = '{}{}{}'.format(self.HOME, os.sep,"HFF_DB_folder")
+            
+            file_path_sqlite = sqlite_DB_path+os.sep+db_names
+            conn = sq.connect(file_path_sqlite)
+            conn.enable_load_extension(True)
+            site_= '%s' % (sito_location+'_SITE_' +  time.strftime('%Y%m%d_') + '.xlsx')
+            dump_dir=os.path.join(sito_path, site_)
             cur.execute("SELECT * FROM site_table where location_='%s';" % sito_location)
             rows = cur.fetchall()
             col_names = []
