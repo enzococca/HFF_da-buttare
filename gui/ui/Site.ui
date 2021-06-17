@@ -123,6 +123,9 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Archaeological layers of current site&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
          <normaloff>:/icons/IconPAI.png</normaloff>:/icons/IconPAI.png</iconset>
@@ -151,6 +154,9 @@
        <property name="toolTip">
         <string>search !!!</string>
        </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;active query search &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
          <normaloff>:/icons/search.png</normaloff>:/icons/search.png</iconset>
@@ -178,6 +184,9 @@
        </property>
        <property name="toolTip">
         <string>View alls records</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reload all records&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
@@ -233,6 +242,9 @@
          <height>30</height>
         </size>
        </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Active/deactive media view&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
          <normaloff>:/icons/photo.png</normaloff>:/icons/photo.png</iconset>
@@ -266,6 +278,9 @@
        </property>
        <property name="toolTip">
         <string>Save</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Save record&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
@@ -320,6 +335,9 @@
        <property name="toolTip">
         <string>New record</string>
        </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;New record&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
          <normaloff>:/icons/newrec.png</normaloff>:/icons/newrec.png</iconset>
@@ -347,6 +365,9 @@
        </property>
        <property name="toolTip">
         <string>Order by</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter records&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
@@ -376,6 +397,9 @@
        <property name="toolTip">
         <string>new search</string>
        </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start query search&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
          <normaloff>:/icons/new_search.png</normaloff>:/icons/new_search.png</iconset>
@@ -399,6 +423,9 @@
        <property name="toolTip">
         <string>Prev rec</string>
        </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Previus record&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
          <normaloff>:/icons/4_leftArrow.png</normaloff>:/icons/4_leftArrow.png</iconset>
@@ -412,6 +439,9 @@
          <width>30</width>
          <height>30</height>
         </size>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;View Layers&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
@@ -439,6 +469,9 @@
        <property name="toolTip">
         <string>Last rec</string>
        </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Last record&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
          <normaloff>:/icons/7_rightArrows.png</normaloff>:/icons/7_rightArrows.png</iconset>
@@ -462,6 +495,9 @@
        <property name="toolTip">
         <string>First rec</string>
        </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;First record&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
          <normaloff>:/icons/5_leftArrows.png</normaloff>:/icons/5_leftArrows.png</iconset>
@@ -475,6 +511,9 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;all archaeological layers&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
@@ -507,6 +546,9 @@
        <property name="toolTip">
         <string>Delete record</string>
        </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delete single record&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
          <normaloff>:/icons/delete.png</normaloff>:/icons/delete.png</iconset>
@@ -529,6 +571,9 @@
        </property>
        <property name="toolTip">
         <string>Next rec</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Next record&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
@@ -712,7 +757,11 @@
                   <bool>true</bool>
                  </property>
                  <property name="whatsThis">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l1nVPHf_1wI&amp;t=50s&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Doc&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l1nVPHf_1wI&amp;amp;t=50s&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Insert name site location&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="editable">
                   <bool>true</bool>
@@ -794,7 +843,7 @@
                   <bool>true</bool>
                  </property>
                  <property name="whatsThis">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l1nVPHf_1wI&amp;t=50s&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Doc&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l1nVPHf_1wI&amp;amp;t=50s&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Insert name ID loocation&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="editable">
                   <bool>true</bool>
@@ -857,7 +906,7 @@
                   <bool>true</bool>
                  </property>
                  <property name="whatsThis">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l1nVPHf_1wI&amp;t=50s&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Doc&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l1nVPHf_1wI&amp;amp;t=50s&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Area (integer value)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="editable">
                   <bool>true</bool>
@@ -909,6 +958,9 @@
                    <height>25</height>
                   </size>
                  </property>
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definition site&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
                  <property name="editable">
                   <bool>true</bool>
                  </property>
@@ -919,7 +971,7 @@
                  </item>
                  <item>
                   <property name="text">
-                   <string> Well</string>
+                   <string>Well</string>
                   </property>
                  </item>
                  <item>
@@ -1018,10 +1070,17 @@
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Date finish survey&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
                 </widget>
                </item>
                <item row="4" column="9">
-                <widget class="QLineEdit" name="lineEdit_date_start"/>
+                <widget class="QLineEdit" name="lineEdit_date_start">
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Date start survey&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
                </item>
                <item row="5" column="5">
                 <spacer name="horizontalSpacer">
@@ -1077,6 +1136,9 @@
                </item>
                <item row="3" column="9">
                 <widget class="QComboBox" name="comboBox_country">
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Country name&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
                  <property name="editable">
                   <bool>true</bool>
                  </property>
@@ -1119,6 +1181,9 @@
                    <horstretch>1</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
+                 </property>
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type of resource survey&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="editable">
                   <bool>true</bool>
@@ -1183,6 +1248,9 @@
                    <height>25</height>
                   </size>
                  </property>
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Survey type: &lt;/p&gt;&lt;p&gt;TES: Terrestrial survey&lt;/p&gt;&lt;p&gt;UWS: Underwater survey&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
                  <property name="editable">
                   <bool>true</bool>
                  </property>
@@ -1200,6 +1268,9 @@
                </item>
                <item row="1" column="3" colspan="2">
                 <widget class="QComboBox" name="comboBox_grab">
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Radius of grab spot in meter (integer value: 5)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
                  <property name="editable">
                   <bool>true</bool>
                  </property>
@@ -1480,6 +1551,9 @@
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="whatsThis">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Insert value:&lt;/p&gt;&lt;p&gt;name ID image in according with name loaded into db with media manager&lt;/p&gt;&lt;p&gt;Orientation of the camera&lt;/p&gt;&lt;p&gt;Description object&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -1612,7 +1686,7 @@
                 </property>
                </widget>
               </item>
-              <item row="0" column="2" colspan="5">
+              <item row="0" column="2" colspan="7">
                <widget class="QComboBox" name="comboBox_soil">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -1650,7 +1724,7 @@
                 </item>
                </widget>
               </item>
-              <item row="0" column="7">
+              <item row="0" column="9">
                <widget class="QLabel" name="label_39">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -1663,7 +1737,7 @@
                 </property>
                </widget>
               </item>
-              <item row="0" column="8" colspan="5">
+              <item row="0" column="10" colspan="5">
                <widget class="QComboBox" name="comboBox_visibility">
                 <property name="editable">
                  <bool>true</bool>
@@ -1695,6 +1769,218 @@
                 </item>
                </widget>
               </item>
+              <item row="1" column="14">
+               <widget class="QComboBox" name="comboBox_damage">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+                <item>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1-10%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>11-30%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>31-60%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>61-90%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>91-100%</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>No Visible/Known</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QPushButton" name="pushButton_remove_row_material">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>8</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="7">
+               <widget class="QPushButton" name="pushButton_insert_row_morphology">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>8</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="8">
+               <widget class="QPushButton" name="pushButton_remove_row_morphology">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>8</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="pushButton_insert_row_features">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>8</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="pushButton_remove_row_features">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>8</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>-</string>
+                </property>
+               </widget>
+              </item>
               <item row="1" column="0" colspan="2">
                <widget class="QLabel" name="label_46">
                 <property name="sizePolicy">
@@ -1705,6 +1991,73 @@
                 </property>
                 <property name="text">
                  <string>Condition state</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="11" colspan="3">
+               <widget class="QLabel" name="label_16">
+                <property name="text">
+                 <string>Damage extent type</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="7">
+               <widget class="QPushButton" name="pushButton_insert_row_disturbance">
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="8">
+               <widget class="QPushButton" name="pushButton_remove_row_disturbance">
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QPushButton" name="pushButton_insert_row_material">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>8</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>+</string>
                 </property>
                </widget>
               </item>
@@ -1744,6 +2097,245 @@
                   <string>Destroyed</string>
                  </property>
                 </item>
+               </widget>
+              </item>
+              <item row="5" column="7" colspan="4">
+               <widget class="QTableWidget" name="tableWidget_morphology">
+                <property name="rowCount">
+                 <number>1</number>
+                </property>
+                <attribute name="horizontalHeaderDefaultSectionSize">
+                 <number>243</number>
+                </attribute>
+                <attribute name="verticalHeaderDefaultSectionSize">
+                 <number>30</number>
+                </attribute>
+                <row/>
+                <column>
+                 <property name="text">
+                  <string>Overall Site Morphology </string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item row="5" column="11" colspan="4">
+               <widget class="QTableWidget" name="tableWidget_collection">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Sunken</enum>
+                </property>
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAsNeeded</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAsNeeded</enum>
+                </property>
+                <property name="editTriggers">
+                 <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+                </property>
+                <property name="selectionMode">
+                 <enum>QAbstractItemView::SingleSelection</enum>
+                </property>
+                <property name="selectionBehavior">
+                 <enum>QAbstractItemView::SelectRows</enum>
+                </property>
+                <property name="rowCount">
+                 <number>1</number>
+                </property>
+                <property name="columnCount">
+                 <number>1</number>
+                </property>
+                <attribute name="horizontalHeaderDefaultSectionSize">
+                 <number>281</number>
+                </attribute>
+                <attribute name="horizontalHeaderMinimumSectionSize">
+                 <number>80</number>
+                </attribute>
+                <attribute name="verticalHeaderDefaultSectionSize">
+                 <number>30</number>
+                </attribute>
+                <row/>
+                <column>
+                 <property name="text">
+                  <string>Collection/Survey Type </string>
+                 </property>
+                </column>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="4" column="12">
+               <widget class="QPushButton" name="pushButton_remove_row_collection">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>8</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0" colspan="7">
+               <widget class="QTableWidget" name="tableWidget_material">
+                <property name="rowCount">
+                 <number>1</number>
+                </property>
+                <property name="columnCount">
+                 <number>1</number>
+                </property>
+                <attribute name="horizontalHeaderDefaultSectionSize">
+                 <number>290</number>
+                </attribute>
+                <attribute name="verticalHeaderDefaultSectionSize">
+                 <number>30</number>
+                </attribute>
+                <row/>
+                <column>
+                 <property name="text">
+                  <string>Material</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item row="4" column="11">
+               <widget class="QPushButton" name="pushButton_insert_row_collection">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>8</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0" colspan="6">
+               <widget class="QTableWidget" name="tableWidget_featuretype">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Sunken</enum>
+                </property>
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAsNeeded</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAsNeeded</enum>
+                </property>
+                <property name="editTriggers">
+                 <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+                </property>
+                <property name="selectionMode">
+                 <enum>QAbstractItemView::SingleSelection</enum>
+                </property>
+                <property name="selectionBehavior">
+                 <enum>QAbstractItemView::SelectRows</enum>
+                </property>
+                <property name="rowCount">
+                 <number>1</number>
+                </property>
+                <property name="columnCount">
+                 <number>1</number>
+                </property>
+                <attribute name="horizontalHeaderDefaultSectionSize">
+                 <number>278</number>
+                </attribute>
+                <attribute name="horizontalHeaderMinimumSectionSize">
+                 <number>80</number>
+                </attribute>
+                <attribute name="verticalHeaderDefaultSectionSize">
+                 <number>30</number>
+                </attribute>
+                <row/>
+                <column>
+                 <property name="text">
+                  <string>Features morphology type</string>
+                 </property>
+                </column>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="3" column="7" colspan="5">
+               <widget class="QTableWidget" name="tableWidget_disturbance">
+                <property name="rowCount">
+                 <number>1</number>
+                </property>
+                <attribute name="horizontalHeaderDefaultSectionSize">
+                 <number>280</number>
+                </attribute>
+                <row/>
+                <column>
+                 <property name="text">
+                  <string>Site overall shape type</string>
+                 </property>
+                </column>
                </widget>
               </item>
               <item row="1" column="3">
@@ -1831,525 +2423,7 @@
                 </item>
                 <item>
                  <property name="text">
-                  <string>Uknow</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-              <item row="1" column="9" colspan="3">
-               <widget class="QLabel" name="label_16">
-                <property name="text">
-                 <string>Damage extent type</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="12">
-               <widget class="QComboBox" name="comboBox_damage">
-                <property name="editable">
-                 <bool>true</bool>
-                </property>
-                <item>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>1-10%</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>11-30%</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>31-60%</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>61-90%</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>91-100%</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>No Visible/Known</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QPushButton" name="pushButton_insert_row_features">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Times New Roman</family>
-                  <pointsize>8</pointsize>
-                  <weight>50</weight>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>+</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QPushButton" name="pushButton_remove_row_features">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Times New Roman</family>
-                  <pointsize>8</pointsize>
-                  <weight>50</weight>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>-</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="5">
-               <widget class="QPushButton" name="pushButton_insert_row_disturbance">
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>+</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="6">
-               <widget class="QPushButton" name="pushButton_remove_row_disturbance">
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>-</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="0">
-               <widget class="QPushButton" name="pushButton_insert_row_material">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                  <horstretch>1</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Times New Roman</family>
-                  <pointsize>8</pointsize>
-                  <weight>50</weight>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>+</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="1">
-               <widget class="QPushButton" name="pushButton_remove_row_material">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Times New Roman</family>
-                  <pointsize>8</pointsize>
-                  <weight>50</weight>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>-</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="5">
-               <widget class="QPushButton" name="pushButton_insert_row_morphology">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                  <horstretch>1</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Times New Roman</family>
-                  <pointsize>8</pointsize>
-                  <weight>50</weight>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>+</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="6">
-               <widget class="QPushButton" name="pushButton_remove_row_morphology">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Times New Roman</family>
-                  <pointsize>8</pointsize>
-                  <weight>50</weight>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>-</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="0" colspan="5">
-               <widget class="QTableWidget" name="tableWidget_material">
-                <property name="rowCount">
-                 <number>1</number>
-                </property>
-                <property name="columnCount">
-                 <number>1</number>
-                </property>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>290</number>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>30</number>
-                </attribute>
-                <row/>
-                <column>
-                 <property name="text">
-                  <string>Material</string>
-                 </property>
-                </column>
-               </widget>
-              </item>
-              <item row="5" column="5" colspan="4">
-               <widget class="QTableWidget" name="tableWidget_morphology">
-                <property name="rowCount">
-                 <number>1</number>
-                </property>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>243</number>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>30</number>
-                </attribute>
-                <row/>
-                <column>
-                 <property name="text">
-                  <string>Overall Site Morphology </string>
-                 </property>
-                </column>
-               </widget>
-              </item>
-              <item row="5" column="9" colspan="4">
-               <widget class="QTableWidget" name="tableWidget_collection">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>1</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Sunken</enum>
-                </property>
-                <property name="verticalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAsNeeded</enum>
-                </property>
-                <property name="horizontalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAsNeeded</enum>
-                </property>
-                <property name="editTriggers">
-                 <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
-                </property>
-                <property name="selectionMode">
-                 <enum>QAbstractItemView::SingleSelection</enum>
-                </property>
-                <property name="selectionBehavior">
-                 <enum>QAbstractItemView::SelectRows</enum>
-                </property>
-                <property name="rowCount">
-                 <number>1</number>
-                </property>
-                <property name="columnCount">
-                 <number>1</number>
-                </property>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>281</number>
-                </attribute>
-                <attribute name="horizontalHeaderMinimumSectionSize">
-                 <number>80</number>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>30</number>
-                </attribute>
-                <row/>
-                <column>
-                 <property name="text">
-                  <string>Collection/Survey Type </string>
-                 </property>
-                </column>
-                <item row="0" column="0">
-                 <property name="text">
-                  <string/>
-                 </property>
-                </item>
-               </widget>
-              </item>
-              <item row="4" column="9">
-               <widget class="QPushButton" name="pushButton_insert_row_collection">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Times New Roman</family>
-                  <pointsize>8</pointsize>
-                  <weight>50</weight>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>+</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="10">
-               <widget class="QPushButton" name="pushButton_remove_row_collection">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Times New Roman</family>
-                  <pointsize>8</pointsize>
-                  <weight>50</weight>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>-</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="5" colspan="5">
-               <widget class="QTableWidget" name="tableWidget_disturbance">
-                <property name="rowCount">
-                 <number>1</number>
-                </property>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>280</number>
-                </attribute>
-                <row/>
-                <column>
-                 <property name="text">
-                  <string>Site overall shape type</string>
-                 </property>
-                </column>
-               </widget>
-              </item>
-              <item row="3" column="0" colspan="4">
-               <widget class="QTableWidget" name="tableWidget_featuretype">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>1</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Sunken</enum>
-                </property>
-                <property name="verticalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAsNeeded</enum>
-                </property>
-                <property name="horizontalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAsNeeded</enum>
-                </property>
-                <property name="editTriggers">
-                 <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
-                </property>
-                <property name="selectionMode">
-                 <enum>QAbstractItemView::SingleSelection</enum>
-                </property>
-                <property name="selectionBehavior">
-                 <enum>QAbstractItemView::SelectRows</enum>
-                </property>
-                <property name="rowCount">
-                 <number>1</number>
-                </property>
-                <property name="columnCount">
-                 <number>1</number>
-                </property>
-                <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>278</number>
-                </attribute>
-                <attribute name="horizontalHeaderMinimumSectionSize">
-                 <number>80</number>
-                </attribute>
-                <attribute name="verticalHeaderDefaultSectionSize">
-                 <number>30</number>
-                </attribute>
-                <row/>
-                <column>
-                 <property name="text">
-                  <string>Features morphology type</string>
-                 </property>
-                </column>
-                <item row="0" column="0">
-                 <property name="text">
-                  <string/>
+                  <string>Unknow</string>
                  </property>
                 </item>
                </widget>
@@ -4309,6 +4383,9 @@
          <height>30</height>
         </size>
        </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Convert Pdf to word file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="icon">
         <iconset resource="../../resources/resources.qrc">
          <normaloff>:/icons/word.png</normaloff>:/icons/word.png</iconset>
@@ -4344,6 +4421,9 @@
          <width>30</width>
          <height>30</height>
         </size>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open path HFF PDF Folder&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
         <string/>
