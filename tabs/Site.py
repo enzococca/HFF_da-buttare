@@ -2101,6 +2101,7 @@ class hff_system__Site(QDialog, MAIN_DIALOG_CLASS):
             
             file_path_sqlite = sqlite_DB_path+os.sep+db_names
             conn = sq.connect(file_path_sqlite)
+            cur = conn.cursor()
             conn.enable_load_extension(True)
             site_= '%s' % (sito_location+'_SITE_' +  time.strftime('%Y%m%d_') + '.xlsx')
             dump_dir=os.path.join(sito_path, site_)
