@@ -1707,7 +1707,6 @@ CREATE INDEX sidx_site_point_the_geom
 CREATE TABLE public.site_poligon
 (
     gid integer NOT NULL DEFAULT nextval('site_poligon_id_seq'::regclass),
-    the_geom geometry(MultiPolygon,-1),
     name_feat character varying COLLATE pg_catalog."default",
     photo character varying COLLATE pg_catalog."default",
     photo2 character varying COLLATE pg_catalog."default",
