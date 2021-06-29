@@ -128,7 +128,7 @@ selection-color: rgb(140, 140, 105);</string>
            <enum>QTabWidget::Triangular</enum>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <property name="elideMode">
            <enum>Qt::ElideNone</enum>
@@ -200,11 +200,11 @@ selection-color: rgb(140, 140, 105);</string>
               </property>
               <property name="url" stdset="0">
                <url>
-                <string>https://marea.soton.ac.uk/about/</string>
+                <string>https://marea.soton.ac.uk/</string>
                </url>
               </property>
               <property name="zoomFactor" stdset="0">
-               <double>1.000000000000000</double>
+               <double>0.500000000000000</double>
               </property>
              </widget>
             </item>
