@@ -84,7 +84,9 @@ try:
 except Exception as e:
     missing_libraries.append(str(e))
 try:
-    import pandas
+    import pkg_resources
+
+    pkg_resources.require("pdf2docx==0.4.6")
 except Exception as e:
     missing_libraries.append(str(e))
     
