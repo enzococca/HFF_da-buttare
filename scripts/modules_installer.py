@@ -38,8 +38,6 @@ if not packages:
         'pdf2docx==0.4.6',
         'networkx',
         'matplotlib',
-        'pandas',
-        'psycopg2',
         'elasticsearch',
         'pysftp',
         'xlsxwriter',
@@ -57,13 +55,9 @@ elif platform.system()=='Darwin':
 else:
     cmd = '{}/bin/python{}'.format(python_path, python_version)
 
-# install pip if it is not found
-try:
-    subprocess.check_call([cmd, '-m', 'ensurepip'], shell=False)
-except:
-    pass
+
 
 for p in packages:
-    subprocess.check_call([cmd, '-m', 'pip', 'install', '--upgrade', p,'--user'], shell=False)
+    subprocess.check_call(['pip', 'install',  p], shell=False)
 
 
