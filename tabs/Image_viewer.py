@@ -557,7 +557,7 @@ class Main(QDialog, MAIN_DIALOG_CLASS):
                 return 0
             try:    
                 for video in sorted(os.listdir(directory)):
-                    if video.endswith(".mp4"): #or .avi, .mpeg, whatever.
+                    if video.endswith(".mp4") or video.endswith(".MP4"): #or .avi, .mpeg, whatever.
                         filenamev, filetypev = video.split(".")[0], video.split(".")[1]  # db definisce nome immagine originale
                         filepathv = directory + '/' + filenamev + "." + filetypev  # db definisce il path immagine originale
                         idunique_video_check = self.db_search_check(self.MAPPER_TABLE_CLASS, 'filepath', filepathv)
