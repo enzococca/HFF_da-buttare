@@ -29,9 +29,10 @@ import time
 import platform
 from builtins import range
 from builtins import str
+from qgis.PyQt import *
 from qgis.PyQt.QtGui import QDesktopServices,QColor, QIcon,QStandardItemModel
-from qgis.PyQt.QtCore import QUrl, QVariant,Qt, QSize,QPersistentModelIndex
-from qgis.PyQt.QtWidgets import QDialog, QMessageBox, QListWidget, QListView, QFrame, QAbstractItemView,QFileDialog, QTableWidgetItem, QListWidgetItem
+from qgis.PyQt.QtCore import *
+from qgis.PyQt.QtWidgets import *
 from qgis.PyQt.uic import loadUiType
 from qgis.core import *
 import processing
@@ -66,7 +67,68 @@ from openpyxl.utils.dataframe import dataframe_to_rows
 from openpyxl.styles import Alignment
 from openpyxl.workbook import Workbook 
 from sqlalchemy import create_engine
+import sys
+import threading
+
+class PercentageWorker(QtCore.QObject):
+    started = QtCore.pyqtSignal()
+    finished = QtCore.pyqtSignal()
+    percentageChanged = QtCore.pyqtSignal(int)
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self._percentage = 0
+
+    @property
+    def percentage(self):
+        return self._percentage
+
+    @percentage.setter
+    def percentage(self, value):
+        if self._percentage == value:
+            return
+        self._percentage = value
+        self.percentageChanged.emit(self.percentage)
+
+    def start(self):
+        self.started.emit()
+
+    def finish(self):
+        self.finished.emit()
+
+
+class FakeWorker:
+    def start(self):
+        pass
+
+    def finish(self):
+        pass
+
+    @property
+    def percentage(self):
+        return 0
+
+    @percentage.setter
+    def percentage(self, value):
+        pass
+
+
+
+
+
+def long_running_function(foo, baz="1", worker=None):
+    if worker is None:
+        worker = FakeWorker()
+    worker.start()
+    while worker.percentage < 100:
+        worker.percentage += 1
+        print(foo, baz)
+        time.sleep(1)
+        worker.finish()
+
 MAIN_DIALOG_CLASS, _ = loadUiType(os.path.join(os.path.dirname(__file__), os.pardir, 'gui', 'ui', 'Eamena.ui'))
+
+
 class Eamena(QDialog, MAIN_DIALOG_CLASS):
     """This class provides to manage the Site Sheet"""
     MSG_BOX_TITLE = "HFF system - Eamena form"
@@ -310,7 +372,7 @@ class Eamena(QDialog, MAIN_DIALOG_CLASS):
             QMessageBox.warning(self, "Connection system", str(e), QMessageBox.Ok)
         self.mDockWidget.setHidden(True)
         self.toolButton_import_excel.clicked.connect(self.setPathexcel)
-        
+        self.progress = QtWidgets.QProgressBar()
         
         self.model = QStandardItemModel()
         self.customize_GUI()
@@ -324,7 +386,17 @@ class Eamena(QDialog, MAIN_DIALOG_CLASS):
         self.empty_fields()
         self.fill_fields()
         self.charge_records()
-        # self.insert_geom()
+        
+    
+    def launch(self):
+        worker = PercentageWorker()
+        worker.percentageChanged.connect(self.progress.setValue)
+        threading.Thread(
+            target=long_running_function,
+            args=("foo",),
+            kwargs=dict(baz="baz", worker=worker),
+            daemon=True,
+        ).start()
     def setPathexcel(self):
         
         s = QgsSettings()
@@ -349,6 +421,8 @@ class Eamena(QDialog, MAIN_DIALOG_CLASS):
             sub = el.split(', ')
             res.append(sub)
         return (res)
+    
+    
     def on_pushButton_import_pressed(self):
         '''import eamena excel file into HFF System'''
         
@@ -476,16 +550,22 @@ class Eamena(QDialog, MAIN_DIALOG_CLASS):
             
             
             
-            QMessageBox.information(self, "INFO", "Import completed",
-                                QMessageBox.Ok)
+            
             
         except Exception as e:
             QMessageBox.warning(self, "Error", str(e),QMessageBox.Ok)
+        
         self.control()
-    
-    
-    
+        i= self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'geometric_place_expression', 'EAMENA'))
+        
+        self.insert_geom()
+        
+        
+        QMessageBox.information(self, "INFO", "Import completed",  QMessageBox.Ok)
+        
+
     def control(self):
+        
         cfg_rel_path = os.path.join(os.sep, 'HFF_DB_folder', 'config.cfg')
         file_path = '{}{}'.format(self.HOME, cfg_rel_path)
         conf = open(file_path, "r")
@@ -1001,8 +1081,13 @@ class Eamena(QDialog, MAIN_DIALOG_CLASS):
         self.update()
     
     def longconvert(self):
+        
+        
         t= self.table2dict("self.tableWidget_geometry_place")
         #QMessageBox.warning(self, "Test Parametri Quant", str(b),  QMessageBox.Ok)
+        
+        # sito_vl = self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'geometric_place_expression', 'EAMENA'))
+        # for i in sito_vl:
         return str(t).replace(']]','').replace('[[','').replace(']','').replace('[','')
     def insert_geom(self):
         conn = Connection()
@@ -1013,14 +1098,24 @@ class Eamena(QDialog, MAIN_DIALOG_CLASS):
             c = engine.connect()
         
             
+            sito_vl = self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'location', 'EAMENA'))
+            a_vl = self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'geometric_place_expression', 'EAMENA'))
             
-            site_point='INSERT INTO site_point (location,the_geom) VALUES ("%s", st_geomfromtext(%s,4326));'%( str(self.comboBox_location.currentText()),self.longconvert())
-            c.execute(site_point)
+            for i,e in zip(sito_vl,a_vl):
+                
+                site_point='INSERT INTO site_point (location,the_geom) VALUES ("{}",GeomFromText({},4326));'.format(i,str(e.replace(']]','').replace('[[','').replace(']','').replace('[','')))
+                c.execute(site_point)
+            a="SELECT RecoverGeometryColumn('site_point', 'the_geom', 4326, 'point', 'XY')";
+            c.execute(a)
             
-            
-        
         except Exception as e:
             QMessageBox.warning(self, "Update error", str(e), QMessageBox.Ok)
+    
+    # def line(self):
+        # a_vl = self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'geometric_place_expression', 'EAMENA'))
+        # #for i in a_vl:
+        # if 'Point' and 'Polygon' in a_vl:
+            
     
     def insert_line(self):
         conn = Connection()
@@ -1032,10 +1127,15 @@ class Eamena(QDialog, MAIN_DIALOG_CLASS):
         
             
             
-           
+            sito_vl = self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'location', 'EAMENA'))
+            a_vl = self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'geometric_place_expression', 'EAMENA'))
             
-            site_line='INSERT INTO site_line (location,the_geom) VALUES ("%s", st_geomfromtext(%s,4326));'%( str(self.comboBox_location.currentText()), self.longconvert())
-            c.execute(site_line)
+            for i,e in zip(sito_vl,a_vl):
+               
+                site_point='INSERT INTO site_line (location,the_geom) VALUES ("{}",GeomFromText({},4326));'.format(i,str(e.replace(']]','').replace('[[','').replace(']','').replace('[','')))
+                c.execute(site_point)
+            a="SELECT RecoverGeometryColumn('site_line', 'the_geom', 4326, 'linestring', 'XY')";
+            c.execute(a)
             
             
         
@@ -1052,10 +1152,15 @@ class Eamena(QDialog, MAIN_DIALOG_CLASS):
         
             
             
+            sito_vl = self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'location', 'EAMENA'))
+            a_vl = self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'geometric_place_expression', 'EAMENA'))
             
-            
-            site_poligon='INSERT INTO site_poligon (location,the_geom) VALUES ("%s", st_geomfromtext(%s,4326));'%( str(self.comboBox_location.currentText()), self.longconvert())
-            c.execute(site_poligon)
+            for i,e in zip(sito_vl,a_vl):
+               
+                site_point='INSERT INTO site_poligon (location,the_geom) VALUES ("{}",GeomFromText({},4326));'.format(i,str(e.replace(']]','').replace('[[','').replace(']','').replace('[','')))
+                c.execute(site_point)
+            a="SELECT RecoverGeometryColumn('site_poligon', 'the_geom', 4326, 'polygon', 'XY')";
+            c.execute(a)
         
         except Exception as e:
             QMessageBox.warning(self, "Update error", str(e), QMessageBox.Ok) 
