@@ -1103,13 +1103,29 @@ class Eamena(QDialog, MAIN_DIALOG_CLASS):
             
             for i,e in zip(sito_vl,a_vl):
                 
-                site_point='INSERT INTO site_point (location,the_geom) VALUES ("{}",GeomFromText({},4326));'.format(i,str(e.replace(']]','').replace('[[','').replace(']','').replace('[','')))
-                c.execute(site_point)
-            a="SELECT RecoverGeometryColumn('site_point', 'the_geom', 4326, 'point', 'XY')";
+                if  str('MULTIPOLYGON') in e:
+                    site_point='INSERT INTO site_poligon (location,the_geom) VALUES ("{}",GeomFromText({},4326));'.format(i,str(e.replace(']]','').replace('[[','').replace(']','').replace('[','')))
+                    c.execute(site_point)
+                
+                elif  str('LINE') in e:
+                
+                    site_point='INSERT INTO site_line (location,the_geom) VALUES ("{}",GeomFromText({},4326));'.format(i,str(e.replace(']]','').replace('[[','').replace(']','').replace('[','')))
+                    c.execute(site_point)
+                
+                else:
+                    site_point='INSERT INTO site_point (location,the_geom) VALUES ("{}",GeomFromText({},4326));'.format(i,str(e.replace(']]','').replace('[[','').replace(']','').replace('[','')))
+                    c.execute(site_point)
+            if  str('MULTIPOLYGON') in e:
+                a="SELECT RecoverGeometryColumn('site_poligon', 'the_geom', 4326, 'multipolygon', 'XY')";
+            
+            elif  str('LINE') in e:
+                a="SELECT RecoverGeometryColumn('site_line', 'the_geom', 4326, 'line', 'XY')";
+            else:
+                a="SELECT RecoverGeometryColumn('site_point', 'the_geom', 4326, 'point', 'XY')";
             c.execute(a)
             
         except Exception as e:
-            QMessageBox.warning(self, "Update error", str(e), QMessageBox.Ok)
+            print(str(e)
     
     # def line(self):
         # a_vl = self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'geometric_place_expression', 'EAMENA'))
