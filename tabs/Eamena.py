@@ -1119,13 +1119,13 @@ class Eamena(QDialog, MAIN_DIALOG_CLASS):
                 a="SELECT RecoverGeometryColumn('site_poligon', 'the_geom', 4326, 'multipolygon', 'XY')";
             
             elif  str('LINE') in e:
-                a="SELECT RecoverGeometryColumn('site_line', 'the_geom', 4326, 'line', 'XY')";
+                a="SELECT RecoverGeometryColumn('site_line', 'the_geom', 4326, 'linestring', 'XY')";
             else:
                 a="SELECT RecoverGeometryColumn('site_point', 'the_geom', 4326, 'point', 'XY')";
             c.execute(a)
             
         except Exception as e:
-            print(str(e)
+            print(str(e))
     
     # def line(self):
         # a_vl = self.UTILITY.tup_2_list_III(self.DB_MANAGER.group_by('eamena_table', 'geometric_place_expression', 'EAMENA'))
