@@ -52,7 +52,7 @@ missing_libraries = []
 try:
     import pkg_resources
 
-    pkg_resources.require("sqlalchemy==1.3.23")
+    pkg_resources.require("sqlalchemy==1.4.27")
 except Exception as e:
     missing_libraries.append(str(e))
 
@@ -127,38 +127,9 @@ for l in missing_libraries:
     install_libraries.append(p[0])
 
 if install_libraries:
-    from qgis.PyQt.QtWidgets import QMessageBox
-
-    res = QMessageBox.warning(None, 'HFF-survey', "If you see this message it means some of the required packages are missing from your machine:\n{}\n\n"
-                                                  "Do you want install the missing packages? Remember you need start QGIS like Admin".format(
-        ',\n'.join(missing_libraries)), QMessageBox.Ok | QMessageBox.Cancel)
-    if res == QMessageBox.Ok:
-        import subprocess
-
-        python_path = sys.exec_prefix
-        python_version = sys.version[:3]
-        if Hff_OS_Utility.isWindows():
-            cmd = '{}/python'.format(python_path)
-        else:
-            cmd = '{}/bin/python{}'.format(python_path, python_version)
-        try:
-            subprocess.call(
-                [cmd, '{}'.format(os.path.join(os.path.dirname(__file__), 'scripts', 'modules_installer.py')),
-                 ','.join(install_libraries)], shell=True if Hff_OS_Utility.isWindows() else False)
-        except Exception as e:
-            if Hff_OS_Utility.isMac():
-                library_path = '/Library/Frameworks/Python.framework/Versions/{}/bin'.format(python_version)
-                cmd = '{}/python{}'.format(library_path, python_version)
-                subprocess.call(
-                    [cmd, '{}'.format(os.path.join(os.path.dirname(__file__), 'scripts', 'modules_installer.py')),
-                     ','.join(install_libraries)])
-            else:
-                error = traceback.format_exc()
-                QgsMessageLog.logMessage(error, tag="HFF", level=Qgis.Critical)
-    else:
-        pass
-
-
+    '''legge le librerie mancanti dalla cartella ext-libs'''
+    import site
+    site.addsitedir(os.path.abspath(os.path.dirname(__file__) + '/ext-libs'))
 
                    
 def classFactory(iface):
